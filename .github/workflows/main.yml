@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
       - name: Moralis Deploy Action
       # You may pin to the exact commit or the version.
       # uses: YosephKS/moralis-deploy-action@4572ad029564ed9f62384c4982737e0a31868840
